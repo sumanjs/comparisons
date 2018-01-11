@@ -3,7 +3,7 @@
 const suman = require('suman');
 const {Test} = suman.init(module);
 
-var sleep = timeout => {
+let sleep = timeout => {
   return new Promise(resolve => {
     setTimeout(t => {
     console.log(`I was sleeping ${timeout} ms`);
@@ -12,7 +12,7 @@ var sleep = timeout => {
 });
 };
 
-var error = (timeout,v) => {
+let error = (timeout,v) => {
   setTimeout(t => {
     throw new Error("BOOM!!! " + v);
 }, timeout);
